@@ -28,7 +28,7 @@ function handleSubmit(event) {
 
 ## Add To-Do functions
 
-To add to-dos to the list, we use a method called "createElement()". Using the input text, we append elements and then append them to <ul> in html.
+To add to-dos to the list, we use a method called "createElement()". Using the input text, we append elements and then append them to ul tag in html.
 
 ```
 function paintToDo(text) {
