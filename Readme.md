@@ -1,6 +1,6 @@
 # To Do List Web Application
 
-This project is to practice javascript creating to-do-list.
+## This project is to practice javascript creating to-do-list.
 
 ## Date Object and setInterval()
 
@@ -12,6 +12,8 @@ clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
 ```
+
+---
 
 ## Make app remember username
 
@@ -25,6 +27,8 @@ function handleSubmit(event) {
   saveName(currentValue);
 }
 ```
+
+---
 
 ## Add To-Do functions
 
@@ -42,3 +46,35 @@ function paintToDo(text) {
   toDoList.appendChild(li);
 }
 ```
+
+---
+
+## Save to-dos in localStorage
+
+Create a object to store text and id and then push that object to array.
+
+```
+const toDoObj = {
+    text: text,
+    id: newId,
+  };
+```
+
+### Use JSON.stringify() to conver a object to string so that we can store it in localStorage.
+
+```
+function saveToDos() {
+  localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
+```
+
+### Used JSON.parse() to parse string to object
+
+```
+const parsedToDos = JSON.parse(loadedToDos);
+    parsedToDos.forEach(function (toDo) {
+      paintToDo(toDo.text);
+    });
+```
+
+---
