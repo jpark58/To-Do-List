@@ -78,3 +78,20 @@ const parsedToDos = JSON.parse(loadedToDos);
 ```
 
 ---
+
+## Update deleted list
+
+When a user click delete button, we have to update "toDos" array. So, put event target in "btn" and get its parendNode which is going to give us id of clicked list. Then, using filter() function, we will create new array and assign it to "toDos".
+
+```
+function deleteToDo(event) {
+  const btn = event.target;
+  const li = btn.parentNode;
+  toDoList.removeChild(li);
+  const cleanToDos = toDos.filter(function (toDo) {
+    return toDo.id !== parseInt(li.id);
+  });
+  toDos = cleanToDos;
+  saveToDos();
+}
+```
