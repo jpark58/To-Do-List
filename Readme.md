@@ -15,7 +15,7 @@ clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
 
 ## Make app remember username
 
-To make the app remember the username, we have used preventDefault() method to remove the default behavior of input box. Then give required actions following the method.
+To make the app remember the username, we have used preventDefault() method to remove the default behavior of input box. Then give required actions following the method. By the way, we use localStorage to store that info.
 
 ```
 function handleSubmit(event) {
@@ -23,5 +23,22 @@ function handleSubmit(event) {
   const currentValue = input.value;
   paintGreeting(currentValue);
   saveName(currentValue);
+}
+```
+
+## Add To-Do functions
+
+To add to-dos to the list, we use a method called "createElement()". Using the input text, we append elements and then append them to <ul> in html.
+
+```
+function paintToDo(text) {
+  const li = document.createElement("li");
+  const delBtn = document.createElement("button");
+  delBtn.innerText = "❌";
+  const span = document.createElement("span");
+  span.innerText = text;
+  li.appendChild(delBtn);
+  li.appendChild(span);
+  toDoList.appendChild(li);
 }
 ```
