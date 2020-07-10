@@ -12,3 +12,16 @@ clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
     minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds}`;
 ```
+
+## Make app remember username
+
+To make the app remember the username, we have used preventDefault() method to remove the default behavior of input box. Then give required actions following the method.
+
+```
+function handleSubmit(event) {
+  event.preventDefault();
+  const currentValue = input.value;
+  paintGreeting(currentValue);
+  saveName(currentValue);
+}
+```
