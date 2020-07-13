@@ -95,3 +95,32 @@ function deleteToDo(event) {
   saveToDos();
 }
 ```
+
+---
+
+## Weather
+
+### Current Weather
+
+Use this website to get real-time weather info. https://openweathermap.org/
+
+### Get current location: latitude, longitude
+
+Use built-in function "getCurrentPosition()"
+
+```
+function askForCoords() {
+  navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
+}
+```
+
+### Fetch data from API server
+
+Send latitude and longitude info to API server.  
+Then, get JSON type data from API server and parse them to get temperatue and location.
+
+```
+fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+  )
+```
