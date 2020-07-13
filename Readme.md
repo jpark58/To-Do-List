@@ -1,5 +1,8 @@
 # To Do List Web Application
 
+Output
+<img src="https://user-images.githubusercontent.com/48766032/87307832-3cbaf980-c555-11ea-8886-d26d4400d5e2.png" width="40%">
+
 ## This project is to practice javascript creating to-do-list.
 
 ## Date Object and setInterval()
